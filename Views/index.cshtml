@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Scrabble Game!</h1>
+    <form action="/Scrabble/created" method="post">
+      <div class = "form-group">
+        <label for="name">Enter a word:</label>
+        <input class = "form-control"  id="word" name="word" type="text" required="true" tite="Please fill in the form">
+      </div>
+      <button type="submit"  class="btn btn-default center-block">Submit</button>
+    </form>
+    <p>
+      Your score is @Model.Score()
+    </p>
+
+  </body>
+</html>
