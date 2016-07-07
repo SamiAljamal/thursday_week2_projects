@@ -43,5 +43,29 @@ namespace Weekday.Objects
       WeekdayFinder weekday = new WeekdayFinder();
       Assert.Equal("Saturday", weekday.Find("12/31/16"));
     }
+    [Fact]
+    public void WeekdayFinder_20160101_Friday()
+    {
+      WeekdayFinder weekday = new WeekdayFinder();
+      Assert.Equal("Friday", weekday.Find("1/1/16"));
+    }
+    [Fact]
+    public void WeekdayFinder_20170101_Sunday()
+    {
+      WeekdayFinder weekday = new WeekdayFinder();
+      Assert.Equal("Sunday", weekday.Find("1/1/17"));
+    }
+    [Fact]
+    public void WeekdayFinder_08000517_Wednesday()
+    {
+      WeekdayFinder weekday = new WeekdayFinder();
+      Assert.Equal("Wednesday", weekday.Find("5/17/800"));
+    }
+    [Fact]
+    public void WeekdayFinder_35000718_Wednesday()
+    {
+      WeekdayFinder weekday = new WeekdayFinder();
+      Assert.Equal("Wednesday", weekday.Find("7/18/3500"));
+    }
   }
 }

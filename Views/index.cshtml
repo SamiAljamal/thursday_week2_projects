@@ -14,8 +14,18 @@
       <button type="submit"  class="btn btn-default center-block">Submit</button>
     </form>
     <p>
-      Your score is @Model.Score()
+      Your score is @Model[0]
     </p>
+    <h1>Find the weekday of any year!</h1>
+    <form action="/weekday/created" method="post">
+      <div class = "form-group">
+        <label for="name">enter a date in the following format: month/day/year </label>
+        <input class = "form-control"  id="date" name="date" type="text" required="true" tite="Please fill in the form">
+      </div>
+      <button type="submit"  class="btn btn-default center-block">Submit</button>
+    </form>
+    <p> The day you entered is a @Model[1] </p>
+
 
   </body>
 </html>
